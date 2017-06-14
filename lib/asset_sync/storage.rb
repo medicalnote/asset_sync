@@ -90,7 +90,7 @@ module AssetSync
         to_load = self.config.assets_prefix.present? ? "#{self.config.assets_prefix}/**/**" : '**/**'
         files = Dir[to_load]
         if defined?(Webpacker) && self.config.include_webpacker_assets
-          files += Dir["#{Webpacker::Configuration.paths.fetch(:entry, "packs")}/**/**"]
+          files += Dir[File.join(Webpacker::Configuration.fetch(:public_output_path), '/**/**')]
         end
         files
       end
