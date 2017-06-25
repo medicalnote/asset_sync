@@ -19,8 +19,8 @@ Gem::Specification.new do |s|
 
   s.add_dependency("fog-core")
   s.add_dependency('unf')
-  s.add_dependency('activemodel')
-  s.add_dependency('mime-types')
+  s.add_dependency('activemodel', ">= 4.1.0")
+  s.add_dependency('mime-types', ">= 2.99")
 
   s.add_development_dependency "rspec"
   s.add_development_dependency "bundler"
